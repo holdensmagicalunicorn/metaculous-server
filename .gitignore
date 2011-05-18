@@ -1,0 +1,6 @@
+/classes/
+*.swp
+*~
+.DS_Store
+# ignore CVS files
+CVS

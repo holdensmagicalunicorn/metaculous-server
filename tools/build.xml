@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<project name="fierce-uifw-server" default="deploy" basedir=".">
+	
+	<property environment="env" />
+	<property file="build.properties" />	
+	
+  <path id="project.class.path">
+    <pathelement location="${build.ui.common}/fierce-uifw-common-1.0.jar"/>  
+  </path>
+
+  <target name="javac" description="Compile java source">
+    <echo message="Java compile..."/>
+    <mkdir dir="${app.basedir}/explode"/>
+    <javac srcdir="${app.basedir}/src" includes="**" encoding="utf-8"
+        destdir="${app.basedir}/explode"
+        source="1.5" target="1.5" nowarn="true"
+        debug="true" debuglevel="lines,vars,source">
+      <classpath refid="project.class.path"/>
+    </javac>
+    <copy todir="${app.basedir}/explode">
+      <fileset dir="${app.basedir}/src"/>
+    </copy>
+  </target>
+
+	<target name="clean">
+		<echo message="clean..."/>
+		<delete dir="${app.basedir}/explode" failonerror="false" />
+	</target>
+
+  <target name="jar" depends="javac" description="Create a jar file">
+    <echo message="create jar..."/>
+    <zip destfile="${project.name}.jar" basedir="../explode"/>
+    <delete dir="${app.basedir}/explode" failonerror="false" /> 
+  </target>
+	
+	<target name="deploy" depends="jar">
+		<echo message="deploying ear..."/>
+		<move file="${project.name}.jar" todir="${build.ui.common}" />
+	</target>
+
+</project>
