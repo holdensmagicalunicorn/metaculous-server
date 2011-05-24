@@ -48,7 +48,7 @@ public class CriteriaHelper {
 			value = String.valueOf(property.getValue());
 		}
 		if(DataTypeEnum.STRING.equals(dataTypeEnum)){
-			String fetchValue = (value!=null) ? "%" + value + "%" : value;
+			String fetchValue = (value!=null) ? "'%" + value + "%'" : value;
 			String operator = (value != null) ? "LIKE" : "IS NOT NULL"; 
 			retval = new Criteria(propertyName, operator, fetchValue);
 			return retval;
