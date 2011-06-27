@@ -4,9 +4,13 @@
 
 ### Introduction
 Metaculous is a framwork for scaffolding and building applications with GWT and currently supports the Ext-GWT UI component library (see third-party).  Some of the features of this framework are as follows.
-* Provides the plumbing to perform GWT-RPC calls via the new GWT event bus API which is useful for UI development as those objects that are interested in data events can subscribe to remote call event bus topics on a per-RPC-call basis.  
+
+* Provides the plumbing to perform GWT-RPC calls via the new GWT event bus API which is useful for UI development as those objects that are interested in data events can subscribe to remote call event bus topics on a per-RPC-call basis. 
+
 * Provides a set of patterns for sharing UI code across projects with minimal bootstrapping code.
+
 * One can optionally use metadata stored in a database (or other persistent store) to assemble common, data-bound, UI patterns.  Such as List, Search, Edit, etc.
+
 We hope that you will consider this project if you need to get a Rich Internet Application (RIA) running quickly and will have to manage large sets of requirements. (see Target Audience)
 
 ### History
@@ -20,11 +24,17 @@ This framework is targeted for anyone charged with developing and owning a large
 
 ### In-Progress
 The following features are under construction or are high priority features.
+
 * Currently the metadata feature is not complete and is still under construction.  Details will be forthcoming.
+
 * Multiple "Showcase" projects demonstrating various aspects of the framework.
+
 * Make the README less buzz-word compliant.
+
 * Maven integration (only ant and Eclipse is supported)
+
 * Provide support for other GWT UI component libraries (i.e. Smart-GWT)
+
 * Add usage instructions to this README.
 
 ### Prerequisites
@@ -32,8 +42,10 @@ This project assumes you are developing with Eclipse, Google's GWT Plugin for Ec
 
 ### Third Party
 Google Web Toolkit (GWT)
-[GWT Home Page] (http://code.google.com/webtoolkit/ "GWT Homepage")
+
+* [GWT Home Page] (http://code.google.com/webtoolkit/ "GWT Homepage")
 Ext-GWT is a ui component library developed and licensed by Sencha.
 [Sencha Ext-GWT Homepage] (http://www.sencha.com/Ext-GWT "Sencha Ext-GWT Homepage")
-Alberto Artasanchez
+
+* Alberto Artasanchez
 [Alberto's Linked-In Page](http://www.linkedin.com/in/artasanchez "Alberto Artasanchez")

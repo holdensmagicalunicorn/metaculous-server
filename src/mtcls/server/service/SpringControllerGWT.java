@@ -27,7 +27,7 @@ public class SpringControllerGWT extends RemoteServiceServlet
     public void init() throws ServletException {
     	super.init();
     	log("SpringControllerGWT:init:INVOKED");
-    	setApplicationContext(WebApplicationContextUtils.getWebApplicationContext(getServletContext()));
+//    	setApplicationContext(WebApplicationContextUtils.getWebApplicationContext(getServletContext()));
     }
 
 
@@ -94,6 +94,9 @@ public class SpringControllerGWT extends RemoteServiceServlet
 	
 	@Override
 	public ApplicationContext getApplicationContext() {
+		if(applicationContext == null){
+			applicationContext = WebApplicationContextUtils.getWebApplicationContext(getServletContext());
+		}
 		return applicationContext;
 	}
 
