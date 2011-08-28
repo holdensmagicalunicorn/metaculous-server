@@ -3,7 +3,7 @@
 ## Metaculous GWT Project Scaffolding Framework
 
 ### Introduction
-Metaculous is a framwork for scaffolding and building applications with GWT and currently supports the Ext-GWT UI component library (see third-party).  Some of the features of this framework are as follows.
+Metaculous is a framework for scaffolding and building applications with GWT and currently supports the Ext-GWT UI component library (see third-party).  Some of the features of this framework are as follows.
 
 * Provides the plumbing to perform GWT-RPC calls via the new GWT event bus API which is useful for UI development as those objects that are interested in data events can subscribe to remote call event bus topics on a per-RPC-call basis. 
 
